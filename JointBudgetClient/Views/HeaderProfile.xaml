@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Grid xmlns="http://xamarin.com/schemas/2014/forms"
+      xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+      x:Class="JointBudgetClient.Views.HeaderProfile"
+      BackgroundColor="{StaticResource Primary}"
+      ColumnSpacing="0" RowSpacing="0">
+
+    <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="*"/>
+        <ColumnDefinition Width="3*"/>
+        <ColumnDefinition Width="*"/>
+    </Grid.ColumnDefinitions>
+    
+    <Grid ColumnSpacing="0" RowSpacing="0" Grid.Column="1" BackgroundColor="{StaticResource Primary}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+
+        <Image Source="icon_wallet" HorizontalOptions="End" Scale="0.4" Grid.Column="0"/>
+        <Label TextColor="{StaticResource Basic}" Text="JointBudget" FontSize="24" HorizontalOptions="Start" Grid.Column="1"/>
+    </Grid>
+    <ImageButton Source="icon_back" Scale="0.6" Grid.Column="2" Command="{Binding GoBack}"/>
+</Grid>

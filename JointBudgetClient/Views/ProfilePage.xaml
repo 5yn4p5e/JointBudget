@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="JointBudgetClient.Views.ProfilePage"
+             xmlns:local="clr-namespace:JointBudgetClient.Views"
+             Shell.NavBarIsVisible="False">
+
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="10*"/>
+            </Grid.RowDefinitions>
+            <local:HeaderProfile Grid.Row="0"/>
+            <Grid Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.2*"/>
+                    <RowDefinition Height="3*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="4*"/>
+                </Grid.RowDefinitions>
+                <Image Source="icon_avatar" Scale="1" Grid.Row="1"/>
+                <Label Text="Самый Щедрый Человек" Grid.Row="2"/>
+                <Label Text="nomoney@gmail.com" Grid.Row="3"/>
+                <Grid Grid.Row="4">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="3*"/>
+                        <ColumnDefinition Width="2*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Text="ID: 141414" Grid.Column="0" HorizontalOptions="End"/>
+                    <Image Source="icon_copy" Grid.Column="1" Scale="0.8" HorizontalOptions="Start"/>
+                </Grid>
+                <Label Text="Редактировать профиль" TextDecorations="Underline" Grid.Row="5"/>
+                <Label Text="Управление семьёй" TextDecorations="Underline" Grid.Row="6"/>
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

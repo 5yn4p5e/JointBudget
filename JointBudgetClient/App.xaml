@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="JointBudgetClient.App">
+    <!--
+        Define global resources and styles here, that apply to all pages in your app.
+    -->
+    <Application.Resources>
+        <ResourceDictionary>
+            <Color x:Key="Basic">#F7F4EA</Color>
+            <Color x:Key="Primary">#1C547C</Color>
+            <Color x:Key="Secondary1">#73A7E2</Color>
+            <Color x:Key="Secondary2">#9BC9B7</Color>
+            <Color x:Key="Txt">#1B2D51</Color>
+            <Color x:Key="Expenses">#D81515</Color>
+            <Color x:Key="Income">#01BAEF</Color>
+            <Style TargetType="Button">
+                <Setter Property="BackgroundColor" Value="{StaticResource Primary}"/>
+                <Setter Property="FontSize" Value="20"/>
+                <Setter Property="TextColor" Value="{StaticResource Basic}"/>
+            </Style>
+            <Style TargetType="Grid">
+                <Setter Property="BackgroundColor" Value="{StaticResource Basic}"/>
+            </Style>
+            <Style TargetType="ContentPage">
+                <Setter Property="BackgroundColor" Value="{StaticResource Basic}"/>
+                <Setter Property="NavigationPage.HasNavigationBar" Value="False"/>
+            </Style>
+            <Style TargetType="Label">
+                <Setter Property="TextColor" Value="{StaticResource Txt}"/>
+                <Setter Property="FontSize" Value="20"/>
+                <Setter Property="HorizontalOptions" Value="Center"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+            </Style>
+            <Style TargetType="ImageButton">
+                <Setter Property="BackgroundColor" Value="{StaticResource Primary}"/>
+            </Style>
+        </ResourceDictionary>        
+    </Application.Resources>
+</Application>
