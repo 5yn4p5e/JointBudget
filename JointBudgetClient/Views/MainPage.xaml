@@ -31,7 +31,10 @@
                     <DatePicker Grid.Column="1"/>
                     <Label Text="Декабрь" Grid.Column="2" TextColor="{StaticResource Secondary2}" VerticalOptions="Start"/>
                 </Grid>
-                <Image Source="icon_diagram" Grid.Row="1" VerticalOptions="Start"/>
+                <!--<Image Source="icon_diagram" Grid.Row="1" VerticalOptions="Start"/>-->
+                <Frame Grid.Row="1" BackgroundColor="Transparent" >
+                    <local:CircleChartPage/>
+                </Frame>
                 <Grid Grid.Row="2">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*"/>

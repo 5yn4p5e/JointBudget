@@ -14,9 +14,9 @@ namespace JointBudgetClient.Views
 	{
 		private HeaderMainViewModel _viewModel;
 
-		public HeaderMain ()
+		public HeaderMain()
 		{
-			InitializeComponent ();
+			InitializeComponent();
 
 			BindingContext = _viewModel = new HeaderMainViewModel();
 		}

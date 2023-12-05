@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JointBudgetClient.Android",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JointBudgetClient.iOS", "JointBudgetClient.iOS\JointBudgetClient.iOS.csproj", "{EEB5973E-5E37-412A-91A0-9D8D5C2662AB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JointBudgetClient", "JointBudgetClient\JointBudgetClient.csproj", "{116D4B63-C101-400C-9B35-DBDBB513BCD7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JointBudgetClient", "JointBudgetClient\JointBudgetClient.csproj", "{116D4B63-C101-400C-9B35-DBDBB513BCD7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
