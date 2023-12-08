@@ -23,12 +23,16 @@ public static class IdentitySeed
         {
             await roleManager.CreateAsync(new IdentityRole("user"));
         }
+        if (await roleManager.FindByNameAsync("DefaultRole") == null)
+        {
+            await roleManager.CreateAsync(new IdentityRole("DefaultRole"));
+        }
         // Создание Администратора
         string adminEmail = "ne0l@ne0l.ru";
         string adminPassword = "1AmAdminHellYeah!";
         if (await userManager.FindByNameAsync(adminEmail) == null)
         {
-            User admin = new User { Email = adminEmail, UserName = adminEmail, FamilyGroupId = "NoFamilyGroup"};
+            User admin = new User { Email = adminEmail, UserName = adminEmail, FamilyGroupId = "DefaultFamilyGroup" };
             IdentityResult result = await userManager.CreateAsync(admin, adminPassword);
             if (result.Succeeded)
             {
@@ -40,11 +44,11 @@ public static class IdentitySeed
         string userPassword = "IAmN0tAdmin!";
         if (await userManager.FindByNameAsync(userEmail) == null)
         {
-            User user = new User { Email = userEmail, UserName = userEmail, FamilyGroupId = "NoFamilyGroup"};
+            User user = new User {Id = "DefaultUser", Email = userEmail, UserName = userEmail, FamilyGroupId = "DefaultFamilyGroup"};
             IdentityResult result = await userManager.CreateAsync(user, userPassword);
             if (result.Succeeded)
             {
-                await userManager.AddToRoleAsync(user, "user");
+                await userManager.AddToRoleAsync(user, "DefaultRole");
             }
         }
     }

@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace JointBudgetAPI.Migrations
 {
     [DbContext(typeof(JointBudgetContext))]
-    [Migration("20231203200110_Initial")]
+    [Migration("20231205210157_Initial")]
     partial class Initial
     {
         /// <inheritdoc />
@@ -164,7 +164,7 @@ namespace JointBudgetAPI.Migrations
 
                     b.Property<string>("ImageId")
                         .IsRequired()
-                        .HasColumnType("varchar(7)");
+                        .HasColumnType("varchar(450)");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -188,13 +188,15 @@ namespace JointBudgetAPI.Migrations
             modelBuilder.Entity("JointBudgetAPI.JointBudgetModels.IncomeImage", b =>
                 {
                     b.Property<string>("Id")
-                        .HasMaxLength(7)
+                        .HasMaxLength(450)
                         .IsUnicode(false)
-                        .HasColumnType("varchar(7)");
+                        .HasColumnType("varchar(450)");
 
                     b.Property<string>("HexColor")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(7)
+                        .IsUnicode(false)
+                        .HasColumnType("varchar(7)");
 
                     b.Property<byte[]>("Image")
                         .IsRequired()

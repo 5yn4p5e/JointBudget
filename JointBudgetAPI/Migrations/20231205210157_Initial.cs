@@ -53,9 +53,9 @@ namespace JointBudgetAPI.Migrations
                 name: "IncomeImage",
                 columns: table => new
                 {
-                    Id = table.Column<string>(type: "varchar(7)", unicode: false, maxLength: 7, nullable: false),
+                    Id = table.Column<string>(type: "varchar(450)", unicode: false, maxLength: 450, nullable: false),
                     Image = table.Column<byte[]>(type: "varbinary(max)", nullable: false),
-                    HexColor = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    HexColor = table.Column<string>(type: "varchar(7)", unicode: false, maxLength: 7, nullable: false)
                 },
                 constraints: table =>
                 {
@@ -230,7 +230,7 @@ namespace JointBudgetAPI.Migrations
                     Id = table.Column<string>(type: "varchar(450)", unicode: false, maxLength: 450, nullable: false),
                     UserId = table.Column<string>(type: "varchar(450)", nullable: false),
                     Name = table.Column<string>(type: "varchar(150)", unicode: false, maxLength: 150, nullable: false),
-                    ImageId = table.Column<string>(type: "varchar(7)", nullable: false)
+                    ImageId = table.Column<string>(type: "varchar(450)", nullable: false)
                 },
                 constraints: table =>
                 {

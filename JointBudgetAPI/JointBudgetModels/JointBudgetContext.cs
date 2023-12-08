@@ -147,7 +147,7 @@ public partial class JointBudgetContext : IdentityDbContext<User>
             entity.Property(e => e.Id)
                 .HasMaxLength(450)
                 .IsUnicode(false);
-            entity.Property(e => e.Id)
+            entity.Property(e => e.HexColor)
                 .HasMaxLength(7)
                 .IsUnicode(false);
         });

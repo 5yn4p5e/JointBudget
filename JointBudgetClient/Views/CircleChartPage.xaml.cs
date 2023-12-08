@@ -1,19 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using JointBudgetClient.ViewModels;
+﻿using JointBudgetClient.ViewModels;
 using Microcharts;
 using SkiaSharp;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using Color = System.Drawing.Color;
 
 namespace JointBudgetClient.Views
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
+    [XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class CircleChartPage : StackLayout
 	{
         public CircleChartPage()
@@ -120,31 +114,31 @@ namespace JointBudgetClient.Views
             var chart = new DonutChart
             {
                 Entries = entries,
-                LabelTextSize = 30,
+                LabelTextSize = 36,
                 HoleRadius = 0.7f,
                 BackgroundColor = SKColor.Empty
             };
 
             // Создаем контейнер для отображения диаграммы
-            var chartViews = new Microcharts.Forms.ChartView[]
+            var chartViews = new[]
             {
                 new Microcharts.Forms.ChartView
                 {
                     HorizontalOptions = LayoutOptions.FillAndExpand,
                     VerticalOptions = LayoutOptions.FillAndExpand,
                     Chart = chart
-                },
-                new Microcharts.Forms.ChartView
-                {
-                HorizontalOptions = LayoutOptions.FillAndExpand,
-                VerticalOptions = LayoutOptions.FillAndExpand,
-                Chart = chart
                 }
+                //new Microcharts.Forms.ChartView
+                //{
+                //    HorizontalOptions = LayoutOptions.FillAndExpand,
+                //    VerticalOptions = LayoutOptions.FillAndExpand,
+                //    Chart = chart
+                //}
             };
 
             // Добавляем диаграмму на страницу
             Diagram.Children.Add(chartViews[0]);
-            Diagram.Children.Add(chartViews[1]);
+            //Diagram.Children.Add(chartViews[1]);
         }
     }
 }

@@ -63,7 +63,7 @@ using (var scope = app.Services.CreateScope())
 {
     var internetShopContext =
     scope.ServiceProvider.GetRequiredService<JointBudgetContext>();
-    //await DbInitializer.Initialize(internetShopContext);
+    await DbInitializer.Initialize(internetShopContext);
     await IdentitySeed.CreateUserRoles(scope.ServiceProvider);
 }
 
